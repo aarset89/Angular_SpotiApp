@@ -18,7 +18,7 @@
     </div>
 
 </div>
-<div *ngIf="!loading" class="row m-5 animated fadeIn fast" >
+<div *ngIf="!loading" class="row m-5 animated fadeIn fast">
     <div class="col">
         <table class="table" style="color: aliceblue;">
             <thead>
@@ -28,12 +28,13 @@
                 <th>Preview</th>
             </thead>
             <tbody>
-                <tr *ngFor="let track of artistTopTracks" >
+                <tr *ngFor="let track of artistTopTracks">
                     <td><img [src]="track.album.images | noimage" height="30px" width="30px"></td>
                     <td>{{ track.album.name }}</td>
                     <td>{{ track.name }}</td>
                     <td>
-                        <audio [src]="track.preview_url" controls></audio>
+                        <iframe [src]=" track.uri | safeDom:'https://open.spotify.com/embed?uri='" width="300"
+                            height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </td>
                 </tr>
 

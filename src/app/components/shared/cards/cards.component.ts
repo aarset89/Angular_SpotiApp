@@ -21,7 +21,7 @@ export class CardsComponent {
     }else{
       artistId = item.artists[0].id;
     }
-console.log(artistId);
+
     return this.router.navigate(['artist', artistId])
     
   }

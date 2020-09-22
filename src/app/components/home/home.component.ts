@@ -9,23 +9,33 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class HomeComponent {
 
- artist:any[] = [];
+  artist: any[] = [];
+  loading: boolean;
+  error: boolean;
+  errorMessage: string;
 
- loading:boolean;
-
-  constructor(private spotify:SpotifyService) {
-    this.loading=true;
+  constructor(private spotify: SpotifyService) {
+    this.loading = true;
+    this.error = false;
     this.artist = spotify.getNewReleases()
-    .subscribe((response:any) =>{
-       console.log(response);
-      this.artist = response;
-      this.loading=false;
-    });
+      .subscribe((response: any) => {
+        console.log(response);
+        this.artist = response;
+        this.loading = false;
+      }, (errorService) => {
+        console.log(errorService);
+        console.log(errorService.error.error.message);
+        this.errorMessage = errorService.error.error.message;
+        this.error = true;
+        this.loading = false;
+
+
+      });
     //  console.log(this.artist);
   }
 
 
 
-  
+
 
 }
