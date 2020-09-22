@@ -1,15 +1,18 @@
-# Section6SpotiApp
+##Intro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+Angular (10) application.
 
-## Development server
+##Pre-requisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In order to use this project, you need to install npm server on your machine and install @angular/cli in npm packages.
 
-## When downloaded
+##Download
 
-In Angular CLI, you must run 'npm install' in order to get all packages necessary to run the project properly.
+To clone this project, use git bash and paste next line in the path you wish 'git clone https://github.com/aarset89/SpotiApp.git'
+After that, you need to download all npm_packages foler from npm server by writing 'npm install' command in CLI.
 
-## Build
+##Start server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+In order to serve this project, write in CLI 'ng serve',open your favorite browser and search for 'localhost:4200'
+
+
