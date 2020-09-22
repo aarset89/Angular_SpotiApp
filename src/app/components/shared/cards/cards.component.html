@@ -1,0 +1,9 @@
+<div class="card-columns">
+    <div (click)="goToArtist(item)" *ngFor="let item of items;" class="card puntero">
+      <img  [src]="item.images | noimage" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text" *ngFor="let cantantes of item.items"><li>{{ cantantes.name }}</li></p>
+      </div>
+    </div>
+</div>

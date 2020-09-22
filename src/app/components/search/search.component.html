@@ -1,0 +1,5 @@
+<input #termino (keyup)="buscarArtista(termino.value)" type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Search">
+
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+
+<app-cards *ngIf="!loading" [items]="result"></app-cards>
